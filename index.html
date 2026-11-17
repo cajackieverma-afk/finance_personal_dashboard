@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f4">
+  <title>pennywise — money, made clear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="pennywise home">
+        <span class="brand-mark">p</span>
+        <span class="brand-name">pennywise<span class="brand-dot">.</span></span>
+      </a>
+      <div class="workspace-label">YOUR MONEY</div>
+      <nav class="primary-nav">
+        <button class="nav-link active" data-page="dashboard"><span class="nav-icon">◫</span>Dashboard</button>
+        <button class="nav-link" data-page="transactions"><span class="nav-icon">↕</span>Transactions</button>
+        <button class="nav-link" data-page="budgets"><span class="nav-icon">▤</span>Budgets</button>
+        <button class="nav-link" data-page="goals"><span class="nav-icon">◎</span>Goals</button>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="workspace-label">MANAGE</div>
+      <nav class="primary-nav">
+        <button class="nav-link" data-page="accounts"><span class="nav-icon">▣</span>Accounts</button>
+        <button class="nav-link" data-page="categories"><span class="nav-icon">◇</span>Categories</button>
+        <button class="nav-link" data-page="settings"><span class="nav-icon">⚙</span>Settings</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="tip-card">
+          <div class="tip-spark">✳</div>
+          <strong>A little progress<br>adds up.</strong>
+          <span>Small steps, brighter future.</span>
+        </div>
+        <button class="profile-button" aria-label="Profile settings">
+          <span class="avatar">J</span>
+          <span class="profile-copy"><strong>Jackie Verma</strong><small>Personal space</small></span>
+          <span class="profile-menu">···</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">p</span><span class="brand-name">pennywise<span class="brand-dot">.</span></span></div>
+        <div class="breadcrumb"><span>Personal space</span><span class="crumb-slash">/</span><strong id="page-crumb">Dashboard</strong></div>
+        <div class="top-actions">
+          <button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button>
+          <button class="top-avatar" aria-label="Profile">J</button>
+        </div>
+      </header>
+      <section id="page-content" class="page-content" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <button class="mobile-nav-link active" data-page="dashboard"><span>◫</span>Home</button>
+    <button class="mobile-nav-link" data-page="transactions"><span>↕</span>Activity</button>
+    <button class="mobile-add" aria-label="Add transaction">+</button>
+    <button class="mobile-nav-link" data-page="budgets"><span>▤</span>Budgets</button>
+    <button class="mobile-nav-link" data-page="more"><span>···</span>More</button>
+  </nav>
+
+  <button class="floating-add" id="quick-add"><span>+</span> Add transaction</button>
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
